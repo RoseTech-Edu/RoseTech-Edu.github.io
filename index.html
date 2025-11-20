@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -25,8 +25,8 @@
                         }
                     },
                     fontFamily: {
-                        serif: ['Merriweather', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'], 
+                        sans: ['Inter', 'sans-serif'],    
                     }
                 }
             }
@@ -53,7 +53,8 @@
 </head>
 <body class="font-sans text-slate-800 bg-gray-50">
 
-    <!-- Top Bar --><div class="bg-slate-900 text-white text-xs py-2 px-4 hidden md:block">
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 hidden md:block">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="space-x-4">
                 <span><i class="fas fa-map-marker-alt mr-1"></i> 720000, Chuy Avenue, Bishkek, Kyrgyzstan</span>
@@ -67,11 +68,13 @@
         </div>
     </div>
 
-    <!-- Navigation --><nav class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <!-- Logo Area --><div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Logo Area -->
+                    <div class="flex-shrink-0 flex items-center gap-3">
                         <div class="w-10 h-10 bg-rose-800 rounded-full flex items-center justify-center text-white text-xl font-serif font-bold">R</div>
                         <div class="flex flex-col">
                             <span class="text-lg font-bold leading-tight text-slate-900 tracking-tight">Kyrgyzstan Rose University</span>
@@ -79,21 +82,24 @@
                         </div>
                     </div>
                 </div>
-                <!-- Desktop Menu --><div class="hidden md:flex items-center space-x-8">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="text-gray-700 hover:text-rose-800 font-medium">Home</a>
                     <a href="#president" class="text-gray-700 hover:text-rose-800 font-medium">About</a>
                     <a href="#academics" class="text-gray-700 hover:text-rose-800 font-medium">Academics</a>
                     <a href="#faculty" class="text-gray-700 hover:text-rose-800 font-medium">Research & Faculty</a>
                     <a href="#" onclick="document.getElementById('apply-modal').classList.remove('hidden')" class="bg-rose-800 text-white px-5 py-2 rounded-md font-medium hover:bg-rose-900 transition">Apply Now</a>
                 </div>
-                <!-- Mobile Menu Button --><div class="md:hidden flex items-center">
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-700 hover:text-rose-800">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu --><div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
                 <a href="#president" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
@@ -103,9 +109,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section --><section id="home" class="relative bg-slate-900 py-32 hero-pattern">
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-slate-900 py-32 hero-pattern">
         <div class="absolute inset-0 overflow-hidden">
-             <!-- Abstract Background Shapes simulating 'Smart Engineering' --><div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-rose-900/20 to-transparent"></div>
+             <!-- Abstract Background Shapes simulating 'Smart Engineering' -->
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-rose-900/20 to-transparent"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div class="inline-block mb-4 px-3 py-1 bg-rose-800/30 border border-rose-500/30 rounded-full text-rose-200 text-sm font-semibold tracking-wide uppercase fade-in-up" style="animation-delay: 0.1s;">
@@ -128,7 +136,8 @@
         </div>
     </section>
 
-    <!-- Stats Bar --><div class="bg-rose-900 py-8">
+    <!-- Stats Bar -->
+    <div class="bg-rose-900 py-8">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div>
                 <div class="text-3xl font-bold font-serif">1998</div>
@@ -149,14 +158,45 @@
         </div>
     </div>
 
-    <!-- President's Message --><section id="president" class="py-20 bg-white">
+    <!-- NEW SECTION: RoseTech Highlights (News/Events) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-serif font-bold text-slate-900 mb-8">RoseTech Highlights</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- News Item 1 -->
+                <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-rose-500">
+                    <p class="text-xs text-gray-500 mb-2 uppercase font-semibold">Research | Nov 15, 2025</p>
+                    <h3 class="font-bold text-slate-900 mb-2">CS学院与Yandex联合举办中亚NLP峰会</h3>
+                    <p class="text-sm text-gray-600">院长Rostova教授宣布与Yandex达成战略合作，共同推动低资源语言模型在突厥语系中的发展。</p>
+                </div>
+                <!-- News Item 2 -->
+                <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-slate-500">
+                    <p class="text-xs text-gray-500 mb-2 uppercase font-semibold">Events | Nov 10, 2025</p>
+                    <h3 class="font-bold text-slate-900 mb-2">Rose Innovation Hub路演日：NomadicPay创始人出席</h3>
+                    <p class="text-sm text-gray-600">杰出校友Murat Aliyev向学生团队提供指导，并宣布对下一批初创项目提供种子轮投资。</p>
+                </div>
+                <!-- News Item 3 -->
+                <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-rose-500">
+                    <p class="text-xs text-gray-500 mb-2 uppercase font-semibold">Academics | Oct 28, 2025</p>
+                    <h3 class="font-bold text-slate-900 mb-2">智能工程学院启动“天山绿色能源”研学项目</h3>
+                    <p class="text-sm text-gray-600">由Bekzat Turusbekov院长主导，旨在利用AI优化高海拔地区的风能和太阳能电网效率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- President's Message -->
+    <section id="president" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                <!-- Image Section --><div class="relative">
-                    <div class="aspect-w-3 aspect-h-4 rounded-lg bg-gray-200 overflow-hidden shadow-xl">
-                         <!-- UPDATED: President Image --><img src="https://image.pollinations.ai/prompt/professional%20headshot%20of%20a%20middle-aged%20Central%20Asian%20male%20academic,%20wearing%20a%20suit%20and%20tie,%20with%20a%20serious%20but%20approachable%20expression.%20Background%20is%20a%20subtle,%20blurry%20university%20library%20or%20office.%20Photorealistic,%20high-resolution,%20studio%20lighting.%20Not%20too%20large,%20focused%20on%20face%20and%20upper%20body." 
+                <!-- Image Section - Optimized for fill -->
+                <div class="relative">
+                    <!-- 优化：使用内联 aspect-ratio 确保图片尺寸比例，并移除冲突的max-width/height样式 -->
+                    <div class="rounded-lg bg-gray-200 overflow-hidden shadow-xl" style="aspect-ratio: 3/4;">
+                         <!-- President Image URL -->
+                        <img src="https://www.xasyu.cn/newsimg/20230606104.jpg" 
                              alt="Official portrait of Dr. Azamat S. Karimov, President of RoseTech" 
-                             class="object-cover w-full h-full">
+                             class="object-cover object-center w-full h-full"> 
                     </div>
                     <div class="absolute -bottom-6 -right-6 bg-rose-800 text-white p-6 rounded-lg shadow-lg hidden md:block">
                         <p class="font-serif text-xl italic">"We are a laboratory for the future."</p>
@@ -178,10 +218,10 @@
                             Many ask me about the origin of our name. In the rugged terrains of Central Asia, a rose is not merely a flower; it is a symbol of resilience, complexity, and the unfolding of life. At RoseTech, we believe education is an organic process. Like a rose, it requires strong roots in fundamental science, but its ultimate purpose is to bloom.
                         </p>
                         <p class="mb-4">
-                            We are not just a university; we are a laboratory for the future. From our "Turing Library" to the advanced "Smart Engineering Labs," every brick on this campus is laid with the intention of fostering innovation.
+                            我们不只是一所大学；我们是面向未来的实验室。从我们的“图灵图书馆”到先进的“智能工程实验室”，校园里每一块砖石的铺设都旨在培养创新精神。
                         </p>
                         <p class="mb-6">
-                            I invite you to join us on this exciting journey.
+                            我邀请您加入这段激动人心的旅程。
                         </p>
                         
                         <div class="mt-8 pt-8 border-t border-gray-200">
@@ -194,142 +234,197 @@
         </div>
     </section>
 
-    <!-- Academics / Course Catalog Highlight --><section id="academics" class="py-20 bg-gray-50">
+    <!-- Academics / Course Catalog Highlight -->
+    <section id="academics" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900">Academic Excellence</h2>
-                <p class="mt-4 text-xl text-gray-600">Bridging the gap between theoretical science and real-world engineering.</p>
+                <p class="mt-4 text-xl text-gray-600">弥合理论科学与现实工程之间的鸿沟，培养具备技术专长和人文关怀的未来领袖。</p>
             </div>
 
-            <!-- Featured Course Syllabus (Good for Verification) --><div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 mb-12">
+            <!-- Featured Course Syllabus (CS101 - Expanded Details) -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 mb-12">
                 <div class="bg-slate-900 px-6 py-4 border-b border-gray-200 flex flex-col md:flex-row justify-between items-center">
                     <div>
                         <h3 class="text-xl font-bold text-white flex items-center">
                             <i class="fas fa-code mr-2 text-rose-500"></i> 
                             CS101: Introduction to Programming & Computational Thinking
                         </h3>
-                        <p class="text-gray-400 text-sm mt-1">School of Computer Science & AI • Fall 2025</p>
+                        <p class="text-gray-400 text-sm mt-1">计算机科学与人工智能学院 • 4.0 学分 • 秋季学期</p>
                     </div>
                     <button class="mt-4 md:mt-0 text-rose-400 hover:text-white text-sm font-semibold">
-                        <i class="fas fa-file-pdf mr-1"></i> Download Syllabus
+                        <i class="fas fa-file-pdf mr-1"></i> 下载完整课程大纲
                     </button>
                 </div>
                 
                 <div class="p-6">
                     <div class="grid md:grid-cols-2 gap-6 mb-8">
                         <div>
-                            <h4 class="font-bold text-slate-900 mb-2">Course Description</h4>
-                            <p class="text-gray-600 text-sm">This course provides a comprehensive introduction to computer science and the art of programming. Using Python as the primary language and C++ for performance analysis, students will learn to think like computer scientists. The curriculum focuses on abstraction, algorithms, data structures, and software engineering principles.</p>
+                            <h4 class="font-bold text-slate-900 mb-2">课程描述与目标</h4>
+                            <p class="text-gray-600 text-sm">本课程旨在提供计算机科学及编程艺术的全面介绍。我们以 **Python** 作为主要教学语言，并引入 **C++** 用于性能分析。学生将学习抽象思维、算法设计、基础数据结构及软件工程原则。课程目标是让学生能够分析复杂问题并将其分解为可计算的步骤，利用版本控制工具 **Git/GitHub** 进行协作开发，并理解**时间复杂度和空间复杂度**。</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-slate-900 mb-2">Required Tools</h4>
-                            <div class="flex gap-2 flex-wrap">
-                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">PyCharm Pro</span>
-                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">CLion</span>
-                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">GitHub Ent</span>
-                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">Linux Env</span>
+                            <h4 class="font-bold text-slate-900 mb-2">必需工具与资源</h4>
+                            <div class="flex gap-2 flex-wrap mb-4">
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">PyCharm Pro (IDE)</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">CLion (C++ IDE)</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">GitHub Enterprise</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">Linux/WSL环境</span>
                             </div>
+                            <h4 class="font-bold text-slate-900 mb-2">评估标准</h4>
+                            <p class="text-xs text-gray-500">作业与实验 (40%) / 期中项目 (20%) / 期末结课项目 (25%) / 课堂参与 (15%)</p>
                         </div>
                     </div>
 
-                    <h4 class="font-bold text-slate-900 mb-4">Weekly Schedule Overview</h4>
+                    <h4 class="font-bold text-slate-900 mb-4">周教学计划精选</h4>
                     <div class="overflow-x-auto">
                         <table class="min-w-full text-sm text-left text-gray-600">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                                 <tr>
-                                    <th class="px-6 py-3">Week</th>
-                                    <th class="px-6 py-3">Topic</th>
-                                    <th class="px-6 py-3">Lab / Assignment</th>
+                                    <th class="px-6 py-3">周次 (Week)</th>
+                                    <th class="px-6 py-3">核心主题 (Topic)</th>
+                                    <th class="px-6 py-3">实验/作业 (Lab / Assignment)</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200 border-b">
                                 <tr class="bg-white">
                                     <td class="px-6 py-4 font-medium text-gray-900">Week 1</td>
-                                    <td class="px-6 py-4">The Rosetech Way: Intro to Computational Thinking</td>
-                                    <td class="px-6 py-4">Lab 1: IDE Setup & Linux</td>
+                                    <td class="px-6 py-4">RoseTech方法论: 计算思维与Linux环境</td>
+                                    <td class="px-6 py-4">实验 1: IDE设置与命令行基础</td>
                                 </tr>
                                 <tr class="bg-gray-50">
-                                    <td class="px-6 py-4 font-medium text-gray-900">Week 5</td>
-                                    <td class="px-6 py-4">Data Structures I: Strings, Tuples, Lists</td>
-                                    <td class="px-6 py-4">Assign 2: Text Analysis</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Week 6</td>
+                                    <td class="px-6 py-4">数据结构 II: 字典、集合与哈希表</td>
+                                    <td class="px-6 py-4">作业 2: 构建学生数据库管理系统</td>
                                 </tr>
                                 <tr class="bg-white">
-                                    <td class="px-6 py-4 font-medium text-gray-900">Week 10</td>
-                                    <td class="px-6 py-4">Object-Oriented Programming (OOP)</td>
-                                    <td class="px-6 py-4">Lab 6: Designing a Banking System</td>
+                                    <td class="px-6 py-4 font-medium text-gray-900">Week 9</td>
+                                    <td class="px-6 py-4">排序算法 (归并、快速) 与 Big O 复杂度分析</td>
+                                    <td class="px-6 py-4">实验 5: 算法效率基准测试</td>
                                 </tr>
                                 <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Week 11</td>
+                                    <td class="px-6 py-4">面向对象进阶: 继承、多态、封装</td>
+                                    <td class="px-6 py-4">作业 4: 设计一个角色扮演游戏 (RPG) 类结构</td>
+                                </tr>
+                                <tr class="bg-white">
                                     <td class="px-6 py-4 font-medium text-gray-900">Week 14</td>
-                                    <td class="px-6 py-4 font-bold text-rose-800">Final Capstone Project</td>
-                                    <td class="px-6 py-4">Agile Sprint & Git Collaboration</td>
+                                    <td class="px-6 py-4 font-bold text-rose-800">期末结课项目：团队协作开发</td>
+                                    <td class="px-6 py-4">敏捷冲刺与Git协作评审</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+            
+            <!-- Other Schools Summary -->
+            <div class="mt-16 grid md:grid-cols-3 gap-6 text-center">
+                <div class="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-cogs text-4xl text-slate-800 mb-3"></i>
+                    <h4 class="font-bold text-lg mb-1">智能工程学院</h4>
+                    <p class="text-sm text-gray-600">聚焦机器人、自动化与可持续能源系统。</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-chart-line text-4xl text-slate-800 mb-3"></i>
+                    <h4 class="font-bold text-lg mb-1">商与管理学院</h4>
+                    <p class="text-sm text-gray-600">培养具备数字化转型技能的商业领袖。</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-globe-asia text-4xl text-slate-800 mb-3"></i>
+                    <h4 class="font-bold text-lg mb-1">丝路人文学院</h4>
+                    <p class="text-sm text-gray-600">国际关系、语言学与地缘政治研究。</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Faculty & Alumni --><section id="faculty" class="py-20 bg-white">
+    <!-- Faculty & Alumni -->
+    <section id="faculty" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">World-Class Faculty & Alumni</h2>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Faculty Card 1 --><div class="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Faculty Card 1: CS Dean -->
+                <div class="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
                     <div class="flex items-center mb-4">
-                        <div class="h-16 w-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
-                             <i class="fas fa-user-graduate text-2xl"></i>
+                        <!-- 替换指导：请将下方placehold.co链接替换为Prof. Rostova的真实肖像，推荐尺寸200x200，并保持object-cover -->
+                        <div class="h-16 w-16 rounded-full bg-gray-200 overflow-hidden">
+                             <img src="https://placehold.co/200x200/9f1239/ffffff?text=E.R." id="faculty-er" alt="Prof. Elena V. Rostova Portrait" class="w-full h-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h3 class="text-lg font-bold text-slate-900">Prof. Elena V. Rostova</h3>
-                            <p class="text-sm text-rose-700">Dean, School of CS & AI</p>
+                            <p class="text-sm text-rose-700">计算机与AI学院 院长</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-sm italic mb-4">"At RoseTech, we don't just write code; we write the future."</p>
+                    <p class="text-gray-600 text-sm italic mb-4">"在RoseTech，我们不只是编写代码；我们更在书写未来。"</p>
                     <div class="text-xs text-gray-500">
-                        <p class="mb-1"><strong class="text-gray-700">Education:</strong> Ph.D., Lomonosov Moscow State Univ.</p>
-                        <p><strong class="text-gray-700">Focus:</strong> NLP & Neural Networks</p>
+                        <p class="mb-1"><strong class="text-gray-700">教育背景:</strong> 莫斯科罗蒙诺索夫大学博士</p>
+                        <p><strong class="text-gray-700">研究方向:</strong> 自然语言处理、神经网络</p>
                     </div>
                 </div>
 
-                <!-- Faculty Card 2 --><div class="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
+                <!-- NEW Faculty Card 2: Smart Engineering Dean -->
+                <div class="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
                     <div class="flex items-center mb-4">
-                        <div class="h-16 w-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
-                             <i class="fas fa-microchip text-2xl"></i>
+                        <!-- 替换指导：请将下方placehold.co链接替换为Dr. Turusbekov的真实肖像，推荐尺寸200x200，并保持object-cover -->
+                        <div class="h-16 w-16 rounded-full bg-gray-200 overflow-hidden">
+                             <img src="https://placehold.co/200x200/9f1239/ffffff?text=B.T." id="faculty-bt" alt="Dr. Bekzat Turusbekov Portrait" class="w-full h-full object-cover">
                         </div>
                         <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-900">Dr. James "Jim" Chen</h3>
-                            <p class="text-sm text-rose-700">Visiting Prof. of Smart Engineering</p>
+                            <h3 class="text-lg font-bold text-slate-900">Dr. Bekzat Turusbekov</h3>
+                            <p class="text-sm text-rose-700">智能工程学院 院长</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-sm italic mb-4">"Engineering is the bridge between human dreams and physical reality."</p>
+                    <p class="text-gray-600 text-sm italic mb-4">"我们的工程旨在解决中亚地区最严峻的能源与自动化挑战。"</p>
                     <div class="text-xs text-gray-500">
-                        <p class="mb-1"><strong class="text-gray-700">Education:</strong> Ph.D., Georgia Tech</p>
-                        <p><strong class="text-gray-700">Former:</strong> Principal Engineer at Google/Intel</p>
+                        <p class="mb-1"><strong class="text-gray-700">教育背景:</strong> 慕尼黑工业大学博士</p>
+                        <p><strong class="text-gray-700">经历:</strong> 曾任中亚最大电信公司首席工程师</p>
+                    </div>
+                </div>
+                
+                <!-- NEW Faculty Card 3: Business Dean -->
+                <div class="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
+                    <div class="flex items-center mb-4">
+                        <!-- 替换指导：请将下方placehold.co链接替换为Prof. Sadykova的真实肖像，推荐尺寸200x200，并保持object-cover -->
+                        <div class="h-16 w-16 rounded-full bg-gray-200 overflow-hidden">
+                             <img src="https://placehold.co/200x200/9f1239/ffffff?text=A.S." id="faculty-as" alt="Prof. Aigul Sadykova Portrait" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-slate-900">Prof. Aigul Sadykova</h3>
+                            <p class="text-sm text-rose-700">商与管理学院 院长</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"成功的商业领导者必须能理解并驾驭数字时代的变革。"</p>
+                    <div class="text-xs text-gray-500">
+                        <p class="mb-1"><strong class="text-gray-700">教育背景:</strong> 伦敦政治经济学院博士</p>
+                        <p><strong class="text-gray-700">研究方向:</strong> 数字经济与金融科技</p>
                     </div>
                 </div>
 
-                <!-- Alumni Card --><div class="bg-slate-50 border border-slate-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
+                <!-- Alumni Card 4: Fintech Founder -->
+                <div class="bg-slate-50 border border-slate-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
                     <div class="flex items-center mb-4">
-                        <div class="h-16 w-16 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
-                             <i class="fas fa-rocket text-2xl"></i>
+                        <!-- 替换指导：请将下方placehold.co链接替换为Murat Aliyev的真实肖像，推荐尺寸200x200，并保持object-cover -->
+                        <div class="h-16 w-16 rounded-full bg-slate-200 overflow-hidden">
+                             <img src="https://placehold.co/200x200/0f172a/ffffff?text=M.A." id="alumni-ma" alt="Murat Aliyev Portrait" class="w-full h-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h3 class="text-lg font-bold text-slate-900">Murat Aliyev '19</h3>
-                            <p class="text-sm text-slate-600">Founder & CEO, NomadicPay</p>
+                            <p class="text-sm text-slate-600">创始人, NomadicPay (金融科技)</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-sm italic mb-4">"RoseTech gave me the technical foundation to challenge the status quo."</p>
+                    <p class="text-gray-600 text-sm italic mb-4">"RoseTech给予了我挑战现状的技术基础和创业心态。"</p>
                     <div class="text-xs text-gray-500">
-                        <p><strong class="text-gray-700">Achievement:</strong> Fastest growing Fintech in Central Asia (500k+ users).</p>
+                        <p><strong class="text-gray-700">成就:</strong> 中亚增长最快的金融科技初创公司。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section --><section class="bg-rose-900 py-16">
+    <!-- CTA Section -->
+    <section class="bg-rose-900 py-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-serif font-bold text-white mb-4">Ready to Shape the Future?</h2>
             <p class="text-rose-100 mb-8 max-w-2xl mx-auto">Applications for Fall 2025 are now open. Scholarships available for international students.</p>
@@ -339,7 +434,8 @@
         </div>
     </section>
 
-    <!-- Footer --><footer class="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800">
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-2">
@@ -356,13 +452,14 @@
                     </div>
                 </div>
                 
+                <!-- UPDATED: Academics links for new schools -->
                 <div>
                     <h4 class="text-sm font-bold uppercase tracking-wider text-rose-500 mb-4">Academics</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#" class="hover:text-white">Computer Science & AI</a></li>
-                        <li><a href="#" class="hover:text-white">Smart Engineering</a></li>
-                        <li><a href="#" class="hover:text-white">Business & Management</a></li>
-                        <li><a href="#" class="hover:text-white">Silk Road Studies</a></li>
+                        <li><a href="#" class="hover:text-white">计算机与AI学院</a></li>
+                        <li><a href="#" class="hover:text-white">智能工程学院</a></li>
+                        <li><a href="#" class="hover:text-white">商与管理学院</a></li>
+                        <li><a href="#" class="hover:text-white">丝路人文学院</a></li>
                     </ul>
                 </div>
 
@@ -403,7 +500,8 @@
         </div>
     </footer>
 
-    <!-- Fake Application Modal (For interactivity) --><div id="apply-modal" class="fixed inset-0 bg-slate-900 bg-opacity-90 hidden z-50 flex items-center justify-center px-4">
+    <!-- Fake Application Modal (For interactivity) -->
+    <div id="apply-modal" class="fixed inset-0 bg-slate-900 bg-opacity-90 hidden z-50 flex items-center justify-center px-4">
         <div class="bg-white rounded-lg max-w-md w-full p-8 relative">
             <button onclick="document.getElementById('apply-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
                 <i class="fas fa-times text-xl"></i>
@@ -425,13 +523,14 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700">Program of Interest</label>
                     <select class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-rose-500 focus:border-rose-500">
-                        <option>B.Sc. Computer Science</option>
-                        <option>B.Eng. Smart Engineering</option>
-                        <option>M.Sc. AI & Robotics</option>
+                        <option>B.Sc. 计算机科学</option>
+                        <option>B.Eng. 智能工程</option>
+                        <option>BBA. 工商管理</option>
+                        <option>M.Sc. AI与机器人</option>
                     </select>
                 </div>
                 <button type="submit" class="w-full bg-rose-800 text-white font-bold py-2 px-4 rounded hover:bg-rose-900 transition">
-                    Create Applicant Account
+                    创建申请账户
                 </button>
             </form>
         </div>
