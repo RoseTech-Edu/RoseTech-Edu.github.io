@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyrgyzstan Rose University of Science and Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            800: '#9f1239', // Official RoseTech Crimson
+                            900: '#881337',
+                        },
+                        slate: {
+                            800: '#1e293b', // Tech Dark Blue
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Merriweather', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239f1239' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        /* Smooth fade in for elements */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-gray-50">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="space-x-4">
+                <span><i class="fas fa-map-marker-alt mr-1"></i> 720000, Chuy Avenue, Bishkek, Kyrgyzstan</span>
+                <span><i class="fas fa-envelope mr-1"></i> admissions@rose.edu.kg</span>
+            </div>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-rose-400">Student Portal</a>
+                <a href="#" class="hover:text-rose-400">Library</a>
+                <a href="#" class="hover:text-rose-400">Alumni</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <!-- Logo Area -->
+                    <div class="flex-shrink-0 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-rose-800 rounded-full flex items-center justify-center text-white text-xl font-serif font-bold">R</div>
+                        <div class="flex flex-col">
+                            <span class="text-lg font-bold leading-tight text-slate-900 tracking-tight">Kyrgyzstan Rose University</span>
+                            <span class="text-xs text-rose-800 font-semibold uppercase tracking-wider">of Science and Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-rose-800 font-medium">Home</a>
+                    <a href="#president" class="text-gray-700 hover:text-rose-800 font-medium">About</a>
+                    <a href="#academics" class="text-gray-700 hover:text-rose-800 font-medium">Academics</a>
+                    <a href="#faculty" class="text-gray-700 hover:text-rose-800 font-medium">Research & Faculty</a>
+                    <a href="#" onclick="document.getElementById('apply-modal').classList.remove('hidden')" class="bg-rose-800 text-white px-5 py-2 rounded-md font-medium hover:bg-rose-900 transition">Apply Now</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-700 hover:text-rose-800">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
+                <a href="#president" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
+                <a href="#academics" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">Academics</a>
+                <a href="#faculty" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">Faculty</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-slate-900 py-32 hero-pattern">
+        <div class="absolute inset-0 overflow-hidden">
+             <!-- Abstract Background Shapes simulating 'Smart Engineering' -->
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-rose-900/20 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block mb-4 px-3 py-1 bg-rose-800/30 border border-rose-500/30 rounded-full text-rose-200 text-sm font-semibold tracking-wide uppercase fade-in-up" style="animation-delay: 0.1s;">
+                The Future of Central Asia
+            </div>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight fade-in-up" style="animation-delay: 0.2s;">
+                Scientia Floret, <br/><span class="text-rose-400">Futurum Creat</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300 fade-in-up" style="animation-delay: 0.3s;">
+                "Wisdom Blooms, Future Unfolds." Join the leading polytechnic institute dedicated to Smart Engineering and Artificial Intelligence.
+            </p>
+            <div class="mt-10 flex justify-center gap-4 fade-in-up" style="animation-delay: 0.4s;">
+                <a href="#academics" class="bg-white text-rose-900 px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition border border-transparent">
+                    Explore Programs
+                </a>
+                <a href="#" class="border border-white text-white px-8 py-3 rounded-md font-bold hover:bg-white/10 transition">
+                    Virtual Tour
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="bg-rose-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div>
+                <div class="text-3xl font-bold font-serif">1998</div>
+                <div class="text-sm uppercase tracking-wider opacity-80">Founded</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold font-serif">4,500+</div>
+                <div class="text-sm uppercase tracking-wider opacity-80">Students</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold font-serif">30+</div>
+                <div class="text-sm uppercase tracking-wider opacity-80">Countries Represented</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold font-serif">98%</div>
+                <div class="text-sm uppercase tracking-wider opacity-80">Employment Rate</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- President's Message -->
+    <section id="president" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <!-- Image Placeholders -->
+                <div class="relative">
+                    <div class="aspect-w-3 aspect-h-4 rounded-lg bg-gray-200 overflow-hidden shadow-xl">
+                         <!-- Placeholder for President Image -->
+                        <div class="w-full h-full bg-slate-800 flex flex-col items-center justify-center text-gray-400 p-8 text-center">
+                            <i class="fas fa-user-tie text-6xl mb-4"></i>
+                            <span>Dr. Azamat S. Karimov<br>Official Portrait</span>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-rose-800 text-white p-6 rounded-lg shadow-lg hidden md:block">
+                        <p class="font-serif text-xl italic">"We are a laboratory for the future."</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 lg:mt-0">
+                    <h2 class="text-rose-800 font-bold uppercase tracking-wider text-sm mb-2">Message from the President</h2>
+                    <h3 class="text-3xl font-serif font-bold text-slate-900 mb-6">Where Wisdom Blooms and the Future Begins</h3>
+                    
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="mb-4">
+                            <strong>Dear Students, Colleagues, and Global Partners,</strong>
+                        </p>
+                        <p class="mb-4">
+                            Welcome to <strong>Kyrgyzstan Rose University of Science and Technology (RoseTech)</strong>. It is my distinct honor to welcome you to our vibrant community in the heart of Bishkek.
+                        </p>
+                        <p class="mb-4">
+                            Many ask me about the origin of our name. In the rugged terrains of Central Asia, a rose is not merely a flower; it is a symbol of resilience, complexity, and the unfolding of life. At RoseTech, we believe education is an organic process. Like a rose, it requires strong roots in fundamental science, but its ultimate purpose is to bloom.
+                        </p>
+                        <p class="mb-4">
+                            We are not just a university; we are a laboratory for the future. From our "Turing Library" to the advanced "Smart Engineering Labs," every brick on this campus is laid with the intention of fostering innovation.
+                        </p>
+                        <p class="mb-6">
+                            I invite you to join us on this exciting journey.
+                        </p>
+                        
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <p class="font-serif text-xl text-slate-900 font-bold">Dr. Azamat S. Karimov, Ph.D.</p>
+                            <p class="text-gray-500">President, Kyrgyzstan Rose University of Science and Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics / Course Catalog Highlight -->
+    <section id="academics" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900">Academic Excellence</h2>
+                <p class="mt-4 text-xl text-gray-600">Bridging the gap between theoretical science and real-world engineering.</p>
+            </div>
+
+            <!-- Featured Course Syllabus (Good for Verification) -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 mb-12">
+                <div class="bg-slate-900 px-6 py-4 border-b border-gray-200 flex flex-col md:flex-row justify-between items-center">
+                    <div>
+                        <h3 class="text-xl font-bold text-white flex items-center">
+                            <i class="fas fa-code mr-2 text-rose-500"></i> 
+                            CS101: Introduction to Programming & Computational Thinking
+                        </h3>
+                        <p class="text-gray-400 text-sm mt-1">School of Computer Science & AI • Fall 2025</p>
+                    </div>
+                    <button class="mt-4 md:mt-0 text-rose-400 hover:text-white text-sm font-semibold">
+                        <i class="fas fa-file-pdf mr-1"></i> Download Syllabus
+                    </button>
+                </div>
+                
+                <div class="p-6">
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-bold text-slate-900 mb-2">Course Description</h4>
+                            <p class="text-gray-600 text-sm">This course provides a comprehensive introduction to computer science and the art of programming. Using Python as the primary language and C++ for performance analysis, students will learn to think like computer scientists. The curriculum focuses on abstraction, algorithms, data structures, and software engineering principles.</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-slate-900 mb-2">Required Tools</h4>
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">PyCharm Pro</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">CLion</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">GitHub Ent</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 rounded text-xs font-semibold text-slate-700">Linux Env</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-slate-900 mb-4">Weekly Schedule Overview</h4>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3">Week</th>
+                                    <th class="px-6 py-3">Topic</th>
+                                    <th class="px-6 py-3">Lab / Assignment</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 border-b">
+                                <tr class="bg-white">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Week 1</td>
+                                    <td class="px-6 py-4">The Rosetech Way: Intro to Computational Thinking</td>
+                                    <td class="px-6 py-4">Lab 1: IDE Setup & Linux</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Week 5</td>
+                                    <td class="px-6 py-4">Data Structures I: Strings, Tuples, Lists</td>
+                                    <td class="px-6 py-4">Assign 2: Text Analysis</td>
+                                </tr>
+                                <tr class="bg-white">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Week 10</td>
+                                    <td class="px-6 py-4">Object-Oriented Programming (OOP)</td>
+                                    <td class="px-6 py-4">Lab 6: Designing a Banking System</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Week 14</td>
+                                    <td class="px-6 py-4 font-bold text-rose-800">Final Capstone Project</td>
+                                    <td class="px-6 py-4">Agile Sprint & Git Collaboration</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty & Alumni -->
+    <section id="faculty" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-12 text-center">World-Class Faculty & Alumni</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Faculty Card 1 -->
+                <div class="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-16 w-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
+                             <i class="fas fa-user-graduate text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-slate-900">Prof. Elena V. Rostova</h3>
+                            <p class="text-sm text-rose-700">Dean, School of CS & AI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"At RoseTech, we don't just write code; we write the future."</p>
+                    <div class="text-xs text-gray-500">
+                        <p class="mb-1"><strong class="text-gray-700">Education:</strong> Ph.D., Lomonosov Moscow State Univ.</p>
+                        <p><strong class="text-gray-700">Focus:</strong> NLP & Neural Networks</p>
+                    </div>
+                </div>
+
+                <!-- Faculty Card 2 -->
+                <div class="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-16 w-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
+                             <i class="fas fa-microchip text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-slate-900">Dr. James "Jim" Chen</h3>
+                            <p class="text-sm text-rose-700">Visiting Prof. of Smart Engineering</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"Engineering is the bridge between human dreams and physical reality."</p>
+                    <div class="text-xs text-gray-500">
+                        <p class="mb-1"><strong class="text-gray-700">Education:</strong> Ph.D., Georgia Tech</p>
+                        <p><strong class="text-gray-700">Former:</strong> Principal Engineer at Google/Intel</p>
+                    </div>
+                </div>
+
+                <!-- Alumni Card -->
+                <div class="bg-slate-50 border border-slate-100 rounded-lg shadow-sm hover:shadow-xl transition p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="h-16 w-16 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+                             <i class="fas fa-rocket text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-slate-900">Murat Aliyev '19</h3>
+                            <p class="text-sm text-slate-600">Founder & CEO, NomadicPay</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"RoseTech gave me the technical foundation to challenge the status quo."</p>
+                    <div class="text-xs text-gray-500">
+                        <p><strong class="text-gray-700">Achievement:</strong> Fastest growing Fintech in Central Asia (500k+ users).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-rose-900 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold text-white mb-4">Ready to Shape the Future?</h2>
+            <p class="text-rose-100 mb-8 max-w-2xl mx-auto">Applications for Fall 2025 are now open. Scholarships available for international students.</p>
+            <button onclick="document.getElementById('apply-modal').classList.remove('hidden')" class="bg-white text-rose-900 font-bold py-3 px-8 rounded shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">
+                Start Application
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 bg-rose-800 rounded-full flex items-center justify-center text-white font-serif font-bold">R</div>
+                        <span class="text-xl font-bold font-serif">RoseTech</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Kyrgyzstan Rose University of Science and Technology is a private research university dedicated to the advancement of science, engineering, and technology in Central Asia.
+                    </p>
+                    <div class="text-xs text-gray-500 space-y-1">
+                        <p>State License No. KG-EDU-2015-8892</p>
+                        <p>Authorized Higher Education Institution.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-rose-500 mb-4">Academics</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white">Computer Science & AI</a></li>
+                        <li><a href="#" class="hover:text-white">Smart Engineering</a></li>
+                        <li><a href="#" class="hover:text-white">Business & Management</a></li>
+                        <li><a href="#" class="hover:text-white">Silk Road Studies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-rose-500 mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fas fa-map-marker-alt w-5"></i> 720000, Chuy Avenue, Bishkek</li>
+                        <li><i class="fas fa-phone w-5"></i> +996 312 123 456</li>
+                        <li><i class="fas fa-envelope w-5"></i> info@rose.edu.kg</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                    <div class="mb-4 md:mb-0 space-y-1">
+                        <p class="font-bold text-gray-400">Kyrgyzstan Rose University of Science and Technology</p>
+                        <p>吉尔吉斯斯坦罗斯理工大学</p>
+                        <p>Кыргызстан Роуз илим жана технология университети</p>
+                        <p>Кыргызский университет науки и технологий «Роуз»</p>
+                    </div>
+                    <div>
+                        <p>&copy; 2025 RoseTech. All Rights Reserved.</p>
+                        <div class="mt-2 space-x-4">
+                            <a href="#" class="hover:text-white">Privacy Policy</a>
+                            <a href="#" class="hover:text-white">Terms of Use</a>
+                            <a href="#" class="hover:text-white">Accessibility</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fake Application Modal (For interactivity) -->
+    <div id="apply-modal" class="fixed inset-0 bg-slate-900 bg-opacity-90 hidden z-50 flex items-center justify-center px-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-8 relative">
+            <button onclick="document.getElementById('apply-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-rose-800 rounded-full flex items-center justify-center text-white font-serif font-bold mx-auto mb-4">R</div>
+                <h3 class="text-2xl font-bold text-slate-900">Begin Application</h3>
+                <p class="text-sm text-gray-500">Fall 2025 Intake</p>
+            </div>
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Redirecting to Student Portal...');">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-rose-500 focus:border-rose-500" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-rose-500 focus:border-rose-500" placeholder="john@example.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Program of Interest</label>
+                    <select class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-rose-500 focus:border-rose-500">
+                        <option>B.Sc. Computer Science</option>
+                        <option>B.Eng. Smart Engineering</option>
+                        <option>M.Sc. AI & Robotics</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-rose-800 text-white font-bold py-2 px-4 rounded hover:bg-rose-900 transition">
+                    Create Applicant Account
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
