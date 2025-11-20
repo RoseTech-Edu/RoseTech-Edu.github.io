@@ -73,9 +73,26 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <!-- Logo Area -->
+                    <!-- Logo Area - Integrated SVG -->
                     <div class="flex-shrink-0 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-rose-800 rounded-full flex items-center justify-center text-white text-xl font-serif font-bold">R</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none" class="w-10 h-10 md:w-12 md:h-12">
+                            <defs>
+                                <linearGradient id="roseGradientNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                                  <stop offset="0%" style="stop-color:#9f1239;stop-opacity:1" />
+                                  <stop offset="100%" style="stop-color:#e11d48;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <circle cx="150" cy="150" r="140" fill="#f0f0f0"/>
+                            
+                            <!-- Geometric Abstract Rose -->
+                            <path d="M150 70 L210 130 L150 160 L90 130 Z" fill="url(#roseGradientNav)" opacity="0.8"/>
+                            <path d="M150 70 L210 130 L150 160 L90 130 Z" stroke="#881337" stroke-width="6" fill="none" opacity="1"/>
+
+                            <!-- Core Element: K variant / Chip -->
+                            <path d="M150 150 L180 180 M150 150 L120 180 M150 150 L150 120" stroke="#0f172a" stroke-width="12" stroke-linecap="round"/>
+                            <circle cx="150" cy="150" r="15" fill="url(#roseGradientNav)"/>
+                        </svg>
                         <div class="flex flex-col">
                             <span class="text-lg font-bold leading-tight text-slate-900 tracking-tight">Kyrgyzstan Rose University</span>
                             <span class="text-xs text-rose-800 font-semibold uppercase tracking-wider">of Science and Technology</span>
