@@ -70,16 +70,19 @@
     </div>
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-3 group">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3 group shrink-0">
                 <img src="https://img.j8.je/images/2025/11/21/TXSZ.jpg" alt="RoseTech Logo" class="w-14 h-14 rounded-full shadow-lg transition group-hover:scale-105 border border-gray-100">
-                <div class="leading-tight">
+                
+                <div class="leading-tight flex flex-col justify-center">
                     <h1 class="text-xl md:text-2xl font-serif font-bold text-slate-900 tracking-tight">RoseTech</h1>
-                    <p class="text-[10px] md:text-xs text-tech font-bold tracking-widest uppercase">Kyrgyzstan Rose University</p>
+                    <p class="text-[10px] md:text-[11px] text-tech font-bold tracking-widest uppercase max-w-[200px] md:max-w-none leading-snug">
+                        Kyrgyzstan Rose University <br class="md:hidden"> of Science & Technology
+                    </p>
                 </div>
             </a>
 
-            <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600 text-sm uppercase tracking-wide">
+            <nav class="hidden lg:flex items-center space-x-8 font-medium text-slate-600 text-sm uppercase tracking-wide">
                 <a href="#home" class="text-rose hover:text-rose-dark transition">Home</a>
                 <a href="#about" class="hover:text-tech transition">About</a>
                 <a href="#academics" class="hover:text-tech transition">Academics</a>
@@ -90,7 +93,7 @@
                 </a>
             </nav>
 
-            <button class="md:hidden text-slate-600 text-2xl"><i class="fas fa-bars"></i></button>
+            <button class="lg:hidden text-slate-600 text-2xl"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
@@ -363,12 +366,12 @@
     <section id="president" class="py-24 bg-slate-50 border-t border-slate-200">
         <div class="container mx-auto px-6">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                <div class="md:w-2/5 relative h-96 md:h-auto min-h-[400px]">
+                <div class="md:w-2/5 relative h-96 md:h-auto md:min-h-[550px]">
                     <img src="https://img.j8.je/images/2025/11/21/TX7L.png" 
                          alt="Dr. Azamat S. Karimov" 
-                         class="absolute inset-0 w-full h-full object-cover object-center filter grayscale-[5%]">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8 text-white">
+                         class="absolute inset-0 w-full h-full object-cover object-top filter grayscale-[5%]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 text-white z-10">
                         <div class="text-2xl font-serif font-bold">Dr. Azamat S. Karimov</div>
                         <div class="text-rose-400 text-sm font-bold uppercase tracking-wider mb-1">President</div>
                         <div class="text-slate-400 text-xs">Ph.D., Technical University of Munich</div>
